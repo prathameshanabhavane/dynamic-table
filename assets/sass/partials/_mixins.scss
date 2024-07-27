@@ -1,0 +1,12 @@
+@mixin truncate_text($after_number_of_line, $is_fixed_height:false) {
+	display: -webkit-box; 
+	-webkit-line-clamp: $after_number_of_line; 
+	-webkit-box-orient: vertical; 
+	overflow: hidden; 
+	line-height: 1.4; 
+	@if $is_fixed_height {
+		height: calc($after_number_of_line * 1.4em); 
+	} @else {
+		max-height: calc($after_number_of_line * 1.4em); 
+	}
+}

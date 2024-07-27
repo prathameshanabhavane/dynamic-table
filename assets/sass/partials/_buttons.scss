@@ -1,0 +1,31 @@
+.btn {
+    display: inline-block;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-2;
+    background-color: $color-1;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media(max-width: 1366px) {
+    .btn {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 767px) {
+    .btn {
+        font-size: 14px;
+    }
+}

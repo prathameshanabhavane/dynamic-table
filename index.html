@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/dist/webapp.min.css">
+</head>
+<body>
+    <div class="main-body">
+       <div class="header">
+            <h1>
+                Student Portal
+            </h1>
+       </div>
+       <div class="search">
+            <input type="text" placeholder="Search" id="search_input">
+            <button class="btn search-btn" id="search_btn">Search</button>
+       </div>
+       <div class="filters">
+            <ul class="filter-ul">
+                <li><button class="btn" id="sort_by_asc">Sort A->Z</button></li>
+                <li><button class="btn" id="sort_by_desc">Sort Z->A</button></li>
+                <li><button class="btn" id="sort_by_marks">Sort By Marks</button></li>
+                <li><button class="btn" id="sort_by_passing">Sort By Passing</button></li>
+                <li><button class="btn" id="sort_by_class">Sort By Class</button></li>
+                <li><button class="btn" id="sort_by_gender">Sort By Gender</button></li>
+            </ul>
+       </div>
+       <div class="table-wrapper">
+            <div class="table-component">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Class</th>
+                            <th>Marks</th>
+                            <th>Passing</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th colspan="7">Male</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>
+                                <div class="student">
+                                    <img src="./assets/img/default.png" alt="Student" class="student-img">
+                                    <h2 class="student-name">Avi Vashishta</h2>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>12</td>
+                            <td>99</td>
+                            <td>Failed</td>
+                            <td>avi@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>
+                                <div class="student">
+                                    <img src="./assets/img/default.png" alt="Student" class="student-img">
+                                    <h2 class="student-name">Avi Vashishta</h2>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>12</td>
+                            <td>99</td>
+                            <td>Failed</td>
+                            <td>avi@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>
+                                <div class="student">
+                                    <img src="./assets/img/default.png" alt="Student" class="student-img">
+                                    <h2 class="student-name">Avi Vashishta</h2>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>12</td>
+                            <td>99</td>
+                            <td>Failed</td>
+                            <td>avi@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+       </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

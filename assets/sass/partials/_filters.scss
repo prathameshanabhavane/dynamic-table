@@ -1,0 +1,74 @@
+.filters {
+    margin: 20px 0;
+    padding: 0 10px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    li {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .btn {
+        border: none;
+        padding: 18px 15px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .filters {
+        li {
+            flex: 0 0 29.33%;
+            max-width: 29.33%;
+            margin: 10px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .filters {
+        margin: 0;
+        overflow: hidden;
+
+        ul {
+            justify-content: center;
+            margin: 0 -16px;
+        }
+
+        li {
+            flex: 0 0 45%;
+            max-width: 45%;
+            margin: 7px;
+        }
+
+        .btn {
+            padding: 15px;
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .filters {
+        margin-top: 15px;
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin: 7px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
