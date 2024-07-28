@@ -20,7 +20,7 @@ fetch(url)
     let tableRow = '';
 
     data.forEach(student => {
-        const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+        const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
         tableRow += `<tr>
                         <th>${id}</th>
                         <td>
@@ -30,7 +30,7 @@ fetch(url)
                             </div>
                         </td>
                         <td>${gender}</td>
-                        <td>${stadard}</td>
+                        <td>${standard}</td>
                         <td>${marks}</td>
                         <td>${passing ? 'Pass' : 'Fail'}</td>
                         <td>${email}</td>
@@ -47,7 +47,7 @@ fetch(url)
         let tableRow = ''
 
         filterdPassing.forEach(student => {
-            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
             tableRow += `<tr>
                             <th>${id}</th>
                             <td>
@@ -57,7 +57,7 @@ fetch(url)
                                 </div>
                             </td>
                             <td>${gender}</td>
-                            <td>${stadard}</td>
+                            <td>${standard}</td>
                             <td>${marks}</td>
                             <td>${passing ? 'Pass' : 'Fail'}</td>
                             <td>${email}</td>
@@ -88,7 +88,7 @@ fetch(url)
         let tableRow = ''
 
         nameAscData.forEach(student => {
-            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
             tableRow += `<tr>
                             <th>${id}</th>
                             <td>
@@ -98,7 +98,7 @@ fetch(url)
                                 </div>
                             </td>
                             <td>${gender}</td>
-                            <td>${stadard}</td>
+                            <td>${standard}</td>
                             <td>${marks}</td>
                             <td>${passing ? 'Pass' : 'Fail'}</td>
                             <td>${email}</td>
@@ -129,7 +129,7 @@ fetch(url)
         let tableRow = ''
 
         nameDescData.forEach(student => {
-            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
             tableRow += `<tr>
                             <th>${id}</th>
                             <td>
@@ -139,7 +139,7 @@ fetch(url)
                                 </div>
                             </td>
                             <td>${gender}</td>
-                            <td>${stadard}</td>
+                            <td>${standard}</td>
                             <td>${marks}</td>
                             <td>${passing ? 'Pass' : 'Fail'}</td>
                             <td>${email}</td>
@@ -158,7 +158,7 @@ fetch(url)
         let tableRow = ''
 
         classAscData.forEach(student => {
-            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
             tableRow += `<tr>
                             <th>${id}</th>
                             <td>
@@ -168,7 +168,7 @@ fetch(url)
                                 </div>
                             </td>
                             <td>${gender}</td>
-                            <td>${stadard}</td>
+                            <td>${standard}</td>
                             <td>${marks}</td>
                             <td>${passing ? 'Pass' : 'Fail'}</td>
                             <td>${email}</td>
@@ -197,7 +197,7 @@ fetch(url)
             if(genderData[keys].length >= 1) {
                 genderData[keys].forEach(data => {
                     // console.log(data);
-                    const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = data;
+                    const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = data;
 
                     tableRow += `<tr>
                                     <th>${id}</th>
@@ -208,7 +208,7 @@ fetch(url)
                                         </div>
                                     </td>
                                     <td>${gender}</td>
-                                    <td>${stadard}</td>
+                                    <td>${standard}</td>
                                     <td>${marks}</td>
                                     <td>${passing ? 'Pass' : 'Fail'}</td>
                                     <td>${email}</td>
@@ -229,7 +229,7 @@ fetch(url)
         let tableRow = ''
 
         marksAscData.forEach(student => {
-            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
             tableRow += `<tr>
                             <th>${id}</th>
                             <td>
@@ -239,7 +239,7 @@ fetch(url)
                                 </div>
                             </td>
                             <td>${gender}</td>
-                            <td>${stadard}</td>
+                            <td>${standard}</td>
                             <td>${marks}</td>
                             <td>${passing ? 'Pass' : 'Fail'}</td>
                             <td>${email}</td>
@@ -260,7 +260,7 @@ fetch(url)
             let tableRow = ''
 
             data.forEach(student => {
-                const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+                const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
                 tableRow += `<tr>
                                 <th>${id}</th>
                                 <td>
@@ -270,7 +270,7 @@ fetch(url)
                                     </div>
                                 </td>
                                 <td>${gender}</td>
-                                <td>${stadard}</td>
+                                <td>${standard}</td>
                                 <td>${marks}</td>
                                 <td>${passing ? 'Pass' : 'Fail'}</td>
                                 <td>${email}</td>
@@ -291,7 +291,7 @@ fetch(url)
         if(inputValue != '') {
         
             data.forEach((student) => {
-                const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+                const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = student;
     
                 if(inputValue.toLowerCase().includes(fname.toLowerCase()) ||
                     inputValue.toLowerCase().includes(lname.toLowerCase()) ||
@@ -306,7 +306,7 @@ fetch(url)
                                             </div>
                                         </td>
                                         <td>${gender}</td>
-                                        <td>${stadard}</td>
+                                        <td>${standard}</td>
                                         <td>${marks}</td>
                                         <td>${passing ? 'Pass' : 'Fail'}</td>
                                         <td>${email}</td>
