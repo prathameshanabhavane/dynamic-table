@@ -106,7 +106,7 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        console.log(nameAscData);
+        // console.log(nameAscData);
     }
 
     const getByDesc = (e) => {
@@ -147,7 +147,7 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        console.log(nameDescData);
+        // console.log(nameDescData);
     }
 
     const getByClass = (e) => {
@@ -283,10 +283,6 @@ fetch(url)
     
     const getBySearched = () => {
         // console.log(inputValue);
-
-        if(inputValue != '') {
-            console.log('empty')
-        }
 
         let tableRow = "";
         let notFound = false;
