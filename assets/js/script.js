@@ -15,7 +15,7 @@ const searchButton = document.getElementById("search_btn");
 fetch(url)
 .then(response => response.json())
 .then(data => {
-    console.log(data);
+    // console.log(data);
 
     let tableRow = '';
 
