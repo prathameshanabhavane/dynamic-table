@@ -11,10 +11,14 @@ const sortByMarks = document.getElementById("sort_by_marks");
 const searchInput = document.getElementById("search_input");
 const searchButton = document.getElementById("search_btn");
 
+
 fetch(url)
 .then(response => response.json())
 .then(data => {
-   let tableRow = '';
+    console.log(data);
+
+    let tableRow = '';
+
     data.forEach(student => {
         const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
         tableRow += `<tr>
@@ -32,14 +36,8 @@ fetch(url)
                         <td>${email}</td>
                     </tr>`
     });
+
     tableBody.innerHTML = tableRow;
-});
-
-
-fetch(url)
-.then(response => response.json())
-.then(data => {
-    console.log(data);
     
     const getByPassing = (e) => {
         e.preventDefault();
@@ -178,7 +176,7 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        console.log(classAscData)
+        // console.log(classAscData)
 
     }
 
@@ -249,7 +247,7 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        console.log(marksAscData)
+        // console.log(marksAscData)
 
     }
 
@@ -283,41 +281,61 @@ fetch(url)
         }
     })
     
-    searchButton.addEventListener('click', (e) => {
-        console.log(inputValue);
-        // InputValue.toLowerCase().includes()
+    const getBySearched = () => {
+        // console.log(inputValue);
+
+        if(inputValue != '') {
+            console.log('empty')
+        }
 
         let tableRow = "";
+        let notFound = false;
+        let tableHasSearchedRow = false;
+
+        if(inputValue != '') {
         
-        data.forEach((student) => {
-            const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+            data.forEach((student) => {
+                const {id, img_src: img, first_name : fname, last_name: lname, gender, class: stadard, marks, passing, email} = student;
+    
+                if(inputValue.toLowerCase().includes(fname.toLowerCase()) ||
+                    inputValue.toLowerCase().includes(lname.toLowerCase()) ||
+                    inputValue.toLowerCase().includes(email.toLowerCase())) {
+                        tableHasSearchedRow = true;
+                        tableRow += `<tr>
+                                        <th>${id}</th>
+                                        <td>
+                                            <div class="student">
+                                                <img src="${img}" alt="Student" class="student-img">
+                                                <h2 class="student-name">${fname} ${lname}</h2>
+                                            </div>
+                                        </td>
+                                        <td>${gender}</td>
+                                        <td>${stadard}</td>
+                                        <td>${marks}</td>
+                                        <td>${passing ? 'Pass' : 'Fail'}</td>
+                                        <td>${email}</td>
+                                    </tr>`
+                    } else {
+                        notFound = true;
+                    }
+    
+                tableBody.innerHTML = tableRow;  
+            })
+    
+            if(notFound && !tableHasSearchedRow) {
+                tableRow += `<tr>
+                                <th colspan="7" style="text-align: center;">No Data Found!</th>
+                            </tr>`
 
-            if(inputValue.toLowerCase().includes(fname.toLowerCase()) ||
-                inputValue.toLowerCase().includes(lname.toLowerCase()) ||
-                inputValue.toLowerCase().includes(email.toLowerCase())) {
-                    tableRow += `<tr>
-                                    <th>${id}</th>
-                                    <td>
-                                        <div class="student">
-                                            <img src="${img}" alt="Student" class="student-img">
-                                            <h2 class="student-name">${fname} ${lname}</h2>
-                                        </div>
-                                    </td>
-                                    <td>${gender}</td>
-                                    <td>${stadard}</td>
-                                    <td>${marks}</td>
-                                    <td>${passing ? 'Pass' : 'Fail'}</td>
-                                    <td>${email}</td>
-                                </tr>`
-                }
+                tableBody.innerHTML = tableRow;
+            }
 
-            tableBody.innerHTML = tableRow;  
-        })
+            // console.log(searchedData);
+        }
+    }
 
-        console.log(searchedData);
-        
-    })
 
+    searchButton.addEventListener('click', getBySearched)
     sortByAsc.addEventListener('click', getByAsc)
     sortByDesc.addEventListener('click', getByDesc)
     sortByPassing.addEventListener('click', getByPassing);
