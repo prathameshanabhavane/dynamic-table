@@ -15,7 +15,6 @@ const searchButton = document.getElementById("search_btn");
 fetch(url)
 .then(response => response.json())
 .then(data => {
-    // console.log(data);
 
     let tableRow = '';
 
@@ -43,7 +42,7 @@ fetch(url)
         e.preventDefault();
 
         const filterdPassing = data.filter((student) => student.passing == true )
-        // console.log(filterdPassing)
+
         let tableRow = ''
 
         filterdPassing.forEach(student => {
@@ -106,7 +105,6 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        // console.log(nameAscData);
     }
 
     const getByDesc = (e) => {
@@ -147,7 +145,6 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        // console.log(nameDescData);
     }
 
     const getByClass = (e) => {
@@ -176,7 +173,6 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        // console.log(classAscData)
 
     }
 
@@ -190,13 +186,13 @@ fetch(url)
         let tableRow = ''
 
         genderKeys.forEach((keys) => {
-            // console.log(keys)
+
             tableRow += `<tr>
                             <th colspan="7">${keys}</th>
                         </tr>`;
             if(genderData[keys].length >= 1) {
                 genderData[keys].forEach(data => {
-                    // console.log(data);
+
                     const {id, img_src: img, first_name : fname, last_name: lname, gender, class: standard, marks, passing, email} = data;
 
                     tableRow += `<tr>
@@ -218,7 +214,6 @@ fetch(url)
             
         })
         tableBody.innerHTML = tableRow;
-        // console.log(genderKeys);
     }
 
     const getByMarks = (e) => {
@@ -247,7 +242,6 @@ fetch(url)
         })
 
         tableBody.innerHTML = tableRow;
-        // console.log(marksAscData)
 
     }
 
@@ -282,7 +276,6 @@ fetch(url)
     })
     
     const getBySearched = () => {
-        // console.log(inputValue);
 
         let tableRow = "";
         let notFound = false;
@@ -326,7 +319,6 @@ fetch(url)
                 tableBody.innerHTML = tableRow;
             }
 
-            // console.log(searchedData);
         }
     }
 
